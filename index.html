@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>TypeTester</title>
 </head>
-<body class="text-white grid grid-rows-3 gap-5">
+<body class="text-white grid grid-rows-3 w-full h-screen">
     <h1 class="text-4xl font-bold text-center mt-5">TYPE<span class="text-[#BADA55]">TESTER</span></h1>
-    <div id="words" class="flex gap-4 text-3xl justify-center items-center w-full">
+    <div id="words" class="flex gap-4 text-3xl justify-center items-start w-full">
         <div class="word">Hello</div>
         <div class="word">Hello</div>
         <div class="word">Hello</div>
@@ -18,17 +19,42 @@
         <div class="word">Hello</div>
         <div class="word">Hello</div>
     </div>
-    <div class="keyboard">
-        <div class="keys">
-            <div class="top">
+    <div class="keyboard justify-center flex gap-2 flex-col w-full">
+            <div class="top flex w-full justify-center gap-2">
                 <kbd>Q</kbd>
                 <kbd>W</kbd>
                 <kbd>E</kbd>
                 <kbd>R</kbd>
                 <kbd>T</kbd>
-                <kbd>T</kbd>
+                <kbd>Y</kbd>
+                <kbd>U</kbd>
+                <kbd>I</kbd>
+                <kbd>O</kbd>
+                <kbd>P</kbd>
             </div>
-        </div>
+            <div class="middle flex w-full justify-center gap-2">
+                <kbd>A</kbd>
+                <kbd>S</kbd>
+                <kbd>D</kbd>
+                <kbd>F</kbd>
+                <kbd>G</kbd>
+                <kbd>H</kbd>
+                <kbd>J</kbd>
+                <kbd>K</kbd>
+                <kbd>L</kbd>
+            </div>
+            <div class="last flex w-full justify-center gap-2">
+                <kbd>Z</kbd>
+                <kbd>X</kbd>
+                <kbd>C</kbd>
+                <kbd>V</kbd>
+                <kbd>B</kbd>
+                <kbd>N</kbd>
+                <kbd>M</kbd>
+            </div>
+            <div class="spacebar flex justify-center w-full ">
+                <kbd class="w-72 border-2 p-3 border-[#BADA55] rounded-lg text-center">Spacebar</kbd>
+            </div>
     </div>
 </body>
 </html>

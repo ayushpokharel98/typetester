@@ -1,3 +1,25 @@
 h1{
     font-family: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
 }
+
+kbd{
+    padding: 1.3rem;
+    border: 0.1rem solid #BADA55;
+    border-radius: 1rem;
+}
+
+@keyframes flash {
+    0%{
+        background-color: transparent;
+    }
+    50%{
+        background-color: #BADA55;
+    }
+    100%{
+        background-color: transparent;
+    }
+}
+
+.flash{
+    animation: flash 1s linear;
+}
