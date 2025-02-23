@@ -18,7 +18,7 @@ if (!wordsInput || !wordContainer) {
     };
 
     const renderWords = async () => {
-        const words = await fetchWords();
+        const words = ["i", "love", "you"];
         wordContainer.innerHTML = "";
         currentLetterIndex = 0;
         currentWordIndex = 0;
