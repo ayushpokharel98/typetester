@@ -1,25 +1,75 @@
-h1{
-    font-family: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+h1 {
+    font-family: "Roboto Mono", monospace;
 }
 
-kbd{
-    padding: 1.3rem;
-    border: 0.1rem solid #BADA55;
-    border-radius: 1rem;
+kbd {
+    padding: 1rem;
+    border: 2px solid #BADA55;
+    border-radius: 10px;
+    width: 4rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(186, 218, 85, 0.1);
+    transition: transform 0.1s ease-in-out;
 }
 
-@keyframes flash {
+kbd:active {
+    transform: scale(0.9);
+}
+
+.space {
+    width: 18rem;
+}
+
+@keyframes flashcorrect {
+    0% { background-color: transparent; }
+    50% { background-color: #BADA55; }
+    100% { background-color: transparent; }
+}
+
+@keyframes flashincorrect {
+    0% { background-color: transparent; }
+    50% { background-color: red; }
+    100% { background-color: transparent; }
+    
+}
+
+.flashcorrect {
+    animation: flashcorrect 0.3s linear;
+}
+
+.flashincorrect {
+    animation: flashincorrect 0.3s linear;
+}
+
+@keyframes blink {
     0%{
-        background-color: transparent;
+        opacity: 0;
     }
     50%{
-        background-color: #BADA55;
+        opacity: 1;
     }
     100%{
-        background-color: transparent;
+        opacity: 0;
     }
 }
 
-.flash{
-    animation: flash 1s linear;
+.caret {
+    animation: blink 1s infinite;
+}
+
+.letter{
+    opacity: 0.3;
+}
+
+.letter.typed{
+    opacity: 1;
+}
+
+.letter.correct{
+    color: #BADA55;
+}
+
+.letter.incorrect{
+    color: red;
 }
